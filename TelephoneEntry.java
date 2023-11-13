@@ -1,12 +1,21 @@
 public abstract class TelephoneEntry 
 {
     String name;
-    String address;
+    Address address;
 
-    TelephoneEntry(String name, String street, String city, String countryCode, String localNumber) {
+    TelephoneEntry(String name, String postCode, String city, String street, String houseNumber, String countryCode, String localNumber) {
         this.name = name;
-        this.address = city + ", " + street;
+        this.address = new Address(postCode, city, street, houseNumber, countryCode, localNumber);
     }
 
+    String getAddress() {
+        return address.getAddress();
+    }
+
+    TelephoneNumber getPhoneNumber(){
+        return address.getPhoneNumber();
+    }
+
+    abstract String getName();
     abstract void description();
 }
