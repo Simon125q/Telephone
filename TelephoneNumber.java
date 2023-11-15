@@ -1,4 +1,4 @@
-public class TelephoneNumber
+public class TelephoneNumber implements Comparable<TelephoneNumber>
 {
     String countryCode;
     String localNumber;
@@ -9,14 +9,15 @@ public class TelephoneNumber
         localNumber = number;
     }
 
-    public boolean compare(TelephoneNumber otherNum)
+    @Override
+    public int compareTo(TelephoneNumber otherNum)
     {
         if (countryCode == otherNum.countryCode && localNumber == otherNum.localNumber)
         {
-            return true;
+            return 1;
         }
         else {
-            return false;
+            return 0;
         }
     }
 

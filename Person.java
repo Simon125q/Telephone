@@ -6,6 +6,7 @@ public class Person extends TelephoneEntry{
         super(firstName, postCode, city, street, houseNumber, countryCode, localNumber);
         this.lastName = lastName; 
     }
+    
 
     String getName() {
         return name + " " + lastName;
