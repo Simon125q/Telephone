@@ -8,14 +8,9 @@ public abstract class TelephoneEntry
         this.address = new Address(postCode, city, street, houseNumber, countryCode, localNumber);
     }
 
-    String getAddress() {
-        return address.getAddress();
-    }
-
     TelephoneNumber getPhoneNumber(){
         return address.getPhoneNumber();
     }
 
-    abstract String getName();
     abstract void description();
 }

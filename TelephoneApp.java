@@ -25,13 +25,13 @@ public class TelephoneApp {
 
         TreeMap<TelephoneNumber, TelephoneEntry> telephoneEntries = new TreeMap<TelephoneNumber, TelephoneEntry>();
         telephoneEntries.put(p1.getPhoneNumber(), p1);
-        telephoneEntries.put(p1.getPhoneNumber(), p2);
-        telephoneEntries.put(p1.getPhoneNumber(), p3);
-        telephoneEntries.put(p1.getPhoneNumber(), p4);
-        telephoneEntries.put(p1.getPhoneNumber(), c1);
-        telephoneEntries.put(p1.getPhoneNumber(), c2);
-        telephoneEntries.put(p1.getPhoneNumber(), c3);
-        telephoneEntries.put(p1.getPhoneNumber(), c4);
+        telephoneEntries.put(p2.getPhoneNumber(), p2);
+        telephoneEntries.put(p3.getPhoneNumber(), p3);
+        telephoneEntries.put(p4.getPhoneNumber(), p4);
+        telephoneEntries.put(c1.getPhoneNumber(), c1);
+        telephoneEntries.put(c2.getPhoneNumber(), c2);
+        telephoneEntries.put(c3.getPhoneNumber(), c3);
+        telephoneEntries.put(c4.getPhoneNumber(), c4);
         
         Iterator<Map.Entry<TelephoneNumber, TelephoneEntry>> iterator = telephoneEntries.entrySet().iterator();
         while (iterator.hasNext()) {

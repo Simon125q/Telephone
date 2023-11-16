@@ -12,13 +12,11 @@ public class TelephoneNumber implements Comparable<TelephoneNumber>
     @Override
     public int compareTo(TelephoneNumber otherNum)
     {
-        if (countryCode == otherNum.countryCode && localNumber == otherNum.localNumber)
-        {
-            return 1;
+        int result = countryCode.compareTo(otherNum.countryCode);
+        if (result == 0) {
+            result = localNumber.compareTo(otherNum.localNumber);
         }
-        else {
-            return 0;
-        }
+        return result;
     }
 
     public void PrintNumber() {

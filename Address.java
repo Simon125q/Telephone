@@ -6,19 +6,12 @@ class Address{
     String houseNumber;
     TelephoneNumber phoneNumber;
 
-    private String wholeAddress;
-
     public Address(String postCode, String city, String street, String houseNumber, String countryCode, String localNumber) {
         this.postCode = postCode;
         this.city = city;
         this.street = street;
         this.houseNumber = houseNumber;
         this.phoneNumber = new TelephoneNumber(countryCode, localNumber);
-        wholeAddress = postCode + " " + city + ", " + street + " " + houseNumber;
-    }
-
-    public String getAddress() {
-        return wholeAddress;
     }
     
     public TelephoneNumber getPhoneNumber() {
@@ -26,7 +19,7 @@ class Address{
     }
 
     public void printAddress() {
-        System.out.println(wholeAddress);
+        System.out.println(postCode + " " + city + ", " + street + " " + houseNumber);
         phoneNumber.PrintNumber();
     }
 
