@@ -10,6 +10,6 @@ public class Company extends TelephoneEntry{
 
     void description() {
         System.out.println(name);
-        System.out.println(address);
+        address.printAddress();
     }
 }

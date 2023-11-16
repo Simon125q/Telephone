@@ -14,6 +14,6 @@ public class Person extends TelephoneEntry{
 
     void description() {
         System.out.println(name + " " + lastName);
-        System.out.println(address);
+        address.printAddress();
     }
 }

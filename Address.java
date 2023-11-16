@@ -6,7 +6,7 @@ class Address{
     String houseNumber;
     TelephoneNumber phoneNumber;
 
-    private String wholeAddress = postCode + " " + city + ", " + street + " " + houseNumber;
+    private String wholeAddress;
 
     public Address(String postCode, String city, String street, String houseNumber, String countryCode, String localNumber) {
         this.postCode = postCode;
@@ -14,6 +14,7 @@ class Address{
         this.street = street;
         this.houseNumber = houseNumber;
         this.phoneNumber = new TelephoneNumber(countryCode, localNumber);
+        wholeAddress = postCode + " " + city + ", " + street + " " + houseNumber;
     }
 
     public String getAddress() {
