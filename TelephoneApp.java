@@ -23,17 +23,17 @@ public class TelephoneApp {
         Company  c4 = new Company("Google", "87-345", "Silicon Valley", "Long street", 
         "347", "387", "678 345 321");
 
-        TreeMap<TelephoneNumber, TelephoneEntry> telephoneEntries = new TreeMap<TelephoneNumber, TelephoneEntry>();
-        telephoneEntries.put(p1.getPhoneNumber(), p1);
-        telephoneEntries.put(p2.getPhoneNumber(), p2);
-        telephoneEntries.put(p3.getPhoneNumber(), p3);
-        telephoneEntries.put(p4.getPhoneNumber(), p4);
-        telephoneEntries.put(c1.getPhoneNumber(), c1);
-        telephoneEntries.put(c2.getPhoneNumber(), c2);
-        telephoneEntries.put(c3.getPhoneNumber(), c3);
-        telephoneEntries.put(c4.getPhoneNumber(), c4);
+        TreeMap<TelephoneNumber, TelephoneEntry> contacts = new TreeMap<TelephoneNumber, TelephoneEntry>();
+        contacts.put(p1.getPhoneNumber(), p1);
+        contacts.put(p2.getPhoneNumber(), p2);
+        contacts.put(p3.getPhoneNumber(), p3);
+        contacts.put(p4.getPhoneNumber(), p4);
+        contacts.put(c1.getPhoneNumber(), c1);
+        contacts.put(c2.getPhoneNumber(), c2);
+        contacts.put(c3.getPhoneNumber(), c3);
+        contacts.put(c4.getPhoneNumber(), c4);
         
-        Iterator<Map.Entry<TelephoneNumber, TelephoneEntry>> iterator = telephoneEntries.entrySet().iterator();
+        Iterator<Map.Entry<TelephoneNumber, TelephoneEntry>> iterator = contacts.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<TelephoneNumber, TelephoneEntry> pair = iterator.next();
             pair.getValue().description();
